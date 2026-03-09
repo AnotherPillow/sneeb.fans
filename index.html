@@ -48,7 +48,7 @@
             <p id="info">loyal followers of the sneeb</p>
         </div>
     </div>
-    <script>
+    <script type="module">
         window.count.innerText = (await fetch(`https://discord.com/api/v9/invites/YpXbfjPW?with_counts=true&with_expiration=true`).then(r => r.json())).profile.member_count
     </script>
 </body>
