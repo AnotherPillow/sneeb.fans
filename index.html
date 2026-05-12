@@ -44,7 +44,17 @@
 
         #info {
             font-size: 1.5em;
-            color: #777;
+            color: hsl(0, 0%, 47%);
+        }
+
+        #badge img {
+            margin-top: 4px;
+            height: 88px;
+            image-rendering: pixelated;
+
+            &:hover {
+                filter: brightness(0.8);
+            }
         }
     </style>
 </head>
@@ -53,6 +63,12 @@
         <div id="txt">
             <p id="count"></p>
             <p id="info">loyal followers of the sneeb</p>
+            <p id="badge">
+                <!-- cursed? yes. it works though! -->
+                <a href="#" onclick="event.preventDefault(); l = this.cloneNode(true); l.children[0].src=l.children[0].src; l.href = location.href.replace('#', ''); l.removeAttribute('onclick'); navigator.clipboard.writeText(l.outerHTML.replaceAll(/(\s{4}|\n|\r)/g, ''))">
+                    <img src="/88x31.png" alt="an image showing a black cat on the left and the text sneeb fans on the right of it.">
+                </a>
+            </p>
         </div>
     </div>
     <script type="module">
